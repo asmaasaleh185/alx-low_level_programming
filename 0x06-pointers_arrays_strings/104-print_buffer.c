@@ -43,7 +43,7 @@ void print_buffer(char *b, int size)
 			{
 				d = '.';
 			}
-			printf("%d", d);
+			printf("%c", d);
 		}
 		printf("\n");
 		e += 10;
