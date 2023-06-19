@@ -1,7 +1,7 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 /**
- * _strlen - gets lengrh of string
+ * _strlen - gets length of string
  * @s: string
  * Return: length of string
  */
@@ -15,7 +15,7 @@ int _strlen(char *s)
 }
 
 /**
- * _strcopy - returns copy of string
+ * _strcopy - returns dest with a copy of string
  * @s: string to be copied
  * @dest: copied string
  * Return: @dest
