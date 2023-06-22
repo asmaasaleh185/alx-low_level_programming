@@ -5,12 +5,12 @@
  * @argv: argument vector
  * Return: always 0 (success)
  */
-int main(int args, int **argv)
+int main(int args, char **argv)
 {
 	int (*op_func)(int, int), a, b;
 
-	if (aegs != 4)
-		printf("Erroe\n", exit(98);
+	if (args != 4)
+		printf("Error\n"), exit(98);
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -24,3 +24,4 @@ int main(int args, int **argv)
 
 	printf("%d\n", op_func(a, b));
 	return (0);
+}
