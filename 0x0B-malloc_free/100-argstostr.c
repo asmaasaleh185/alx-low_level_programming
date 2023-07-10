@@ -1,20 +1,5 @@
 #include "main.h"
 /**
- * _strlen - find  length of a string
- * @s: string
- * Return: int
- */
-
-int _strlen(char *s)
-{
-	int size = 0;
-
-	for (; s[size] != '\0'; size++)
-		;
-	return (size);
-}
-
-/**
  * *argstostr - concatenates all the arguments of your program
  * @ac: int
  * @av: arguments
@@ -22,27 +7,44 @@ int _strlen(char *s)
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, c = 0, nc = 0, cmpt = 0;
+	int i = 0, ch = 0, j = 0, k = 0;
 	char *s;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (; i < ac; i++, nc++)
-		nc += _strlen(av[i]);
-
-	s = malloc(sizeof(char) * nc + 1);
-	if (s == 0)
-		return (NULL);
-
-	for (i = 0; i < ac; i++)
+	while (i < ac)
 	{
-		for (; av[i][c] != '\0'; c++, cmpt++)
-			s[cmpt] = av[i][c];
+		while (av[i][j])
+		{
+			ch++;
+			j++;
+		}
 
-		s[cmpt] = '\n';
-		cmpt++;
+		j = 0;
+		i++;
 	}
-	s[cmpt] = '\0';
+
+	s = malloc((sizeof(char) * ch) + ac + 1);
+
+	i = 0;
+	while (av[i])
+	{
+		while (av[i][j])
+		{
+			s[k] = av[i][j];
+			k++;
+			j++;
+		}
+
+		s[k] = '\n';
+
+		j = 0;
+		k++;
+		i++;
+	}
+
+	k++;
+	s[k] = '\0';
 	return (s);
 }
