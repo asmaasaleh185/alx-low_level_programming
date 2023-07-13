@@ -10,8 +10,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void _puts(char *s);
-int _stoi(const char *s);
-void _print(unsigned long int n);
+int _isdigit(int c);
+int _strlen(char *s);
+char *_mul(char *s1, char *s2);
 
 #endif
