@@ -12,6 +12,7 @@ char *_memset(char *s, char c, unsigned int n)
 
 	while (n--)
 		*s++ = c;
+
 	return (ptr);
 }
 
@@ -21,17 +22,18 @@ char *_memset(char *s, char c, unsigned int n)
  * @size: size of each element
  * Return: pointer
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *m;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-
 	m = malloc(sizeof(int) * nmemb);
 
 	if (m == 0)
 		return (NULL);
+
 	_memset(m, 0, sizeof(int) * nmemb);
 
 	return (m);
